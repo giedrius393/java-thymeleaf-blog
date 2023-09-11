@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javathymeleafblog.repositories.PostRepository">
+    <resultMap id="postResultMap" type="com.example.javathymeleafblog.entities.Post">
+        <result property="name" column="name" />
+        <result property="text" column="text" />
+        <association property="author" javaType="com.example.javathymeleafblog.entities.Author">
+            <result property="name" column="author_name" />
+        </association>
+    </resultMap>
+</mapper>

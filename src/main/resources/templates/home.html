@@ -5,11 +5,10 @@
   <title>The Blog</title>
 </head>
 <body>
-  <h1 th:text="${post.name}">The name</h1>
-  <p th:text="${post.author.getName()}"></p>
-  <p th:text="${post.text}"></p>
-  <h1 th:text="${post.name}">The name</h1>
-  <p th:text="${post.author.getName()}"></p>
-  <p th:text="${post.text}"></p>
+  <article th:each="post : ${posts}">
+    <h1 th:text="${post.name}">The name</h1>
+    <p th:text="${post.author.getName()}"></p>
+    <p th:text="${post.text}"></p>
+  </article>
 </body>
 </html>
